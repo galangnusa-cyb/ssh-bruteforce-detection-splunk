@@ -1,4 +1,5 @@
 OVERVIEW
+
 This project simulates SSH brute-force activity in a controlled lab environment and builds Splunk detections, dashboards, and alerts to identify credential abuse patterns using Linux authentication logs (/var/log/auth.log).
 
 Goals
